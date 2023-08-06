@@ -22,7 +22,6 @@ import { createSlice } from '@reduxjs/toolkit';
                 localStorage.setItem('todo', JSON.stringify(state.listTodo));
             },
             toggleTodo: (state, action ) => {
-                console.log(action)
                 state.listTodo.map( todo => {
                     if (todo.id === action.payload){
                         todo.checked = !todo.checked;
